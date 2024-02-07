@@ -1,0 +1,161 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+  html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1px;
+    scroll-behavior: smooth;
+  } 
+   
+  *, *:before, *:after {box-sizing: inherit;margin: 0;padding: 0;}  
+
+
+
+
+
+
+
+
+
+:root{
+  --primary:#000;
+  --secondary:rgb(24 24 27);
+  --border:rgba(63,63,70,0.4);
+  /* --border:red; */
+  --title:rgb(244 244 245);
+  --subtitle:rgb(161 161 170);
+  --bgheader:rgb(39,39,42);
+  --blue:rgb(35, 35, 230);
+  --container-padding: 4.8rem;
+}
+.light{
+  --primary:rgb(250,250,250);
+  --secondary:rgb(255, 255, 255);
+  --title:rgb(7, 7, 8);
+  --subtitle:rgb(11, 11, 27);
+  --border:rgba(202,202,202,0.518);
+  --bgheader:rgb(253,253,253);
+}
+
+
+
+body{
+  background-color:var(--primary);
+  color: #fff;
+}
+
+.container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid var(--border);
+  /* text-align: center; */
+  background-color: var(--secondary);
+  padding: 0 var(--container-padding);
+}
+.divider{
+  border-bottom: 1px solid var(--border);
+  margin: 3rem 0;
+  width: calc(100% + var(--container-padding) + var(--container-padding));
+  margin-left: calc(var(--container-padding) * -1);
+}
+button{
+  all:unset;
+}
+
+
+
+/* this for nav  */
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: initial;
+  transition: all 0.2s;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+
+.border{
+  border: 2px solid red;
+}
+button:hover{
+  cursor: pointer;
+}
+button:active{
+  scale: 0.8;
+}
+button:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+
+@media (max-width: 1000px) {
+  .container {
+    --container-padding: 1.7rem;
+    width: 90%;
+    padding: 0 var(--container-padding);
+  }
+  .divider {
+    width: calc(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+
+
+.scroll2top{
+  background-color:rgb(14, 14, 88);
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  border:1px solid rgb(66, 64, 64);
+  font-size: 1.4rem;
+}
+.scroll2top:hover{
+  background-color: rgb(4, 4, 19);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 var(--container-padding);
+  }
+  
+}
+
+
+
+ 
+::-webkit-scrollbar {
+  width: 0.8rem;
+ }
+ 
+::-webkit-scrollbar-track {
+  border: 7px solid #232943;
+  box-shadow: inset 0 0 2.5px 2px #00000080;
+  border-radius: 4px;
+  }
+ 
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ 
+/* for Firefox */
+ html {scrollbar-color: #9e4673 #3d4a59;} 

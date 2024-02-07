@@ -1,0 +1,138 @@
+/* =============
+ table of contents
+===============
+ 
+1. header design
+2. iconbutton*/
+
+
+main.flex{
+  gap: 15px;
+  align-items: start;
+  /* flex-wrap: wrap;/ */
+}
+
+
+/**************************
+ 1. left-section
+  **************************/
+.left-section{
+  flex-direction: column;
+  gap: 10px;
+
+}
+.left-section button{
+  border: 2px solid var(--border);
+  padding: 0.75rem 0;
+  border-radius: 10px;
+  width: 11rem;
+  text-align: center;
+  background-color: rgba(36,37,46,1);
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.left-section button:hover{
+  border: 2px solid var(--title) ;
+  opacity: 1;
+  
+}
+.left-section button.active{
+opacity: 1;
+font-weight: bold;
+letter-spacing: 0.6px;
+border: 1px solid var(--blue);
+padding: 0.8rem 0;
+}
+.light .left-section button.active{
+  border:#000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /**************************
+ 1. right-section
+  **************************/
+  .right-section{
+justify-content: center;
+flex-wrap: wrap;
+flex-grow: 1;
+gap:15px;
+  }
+  .card{
+    /* margin-left: auto;
+    margin-right: auto; */
+    border:1px solid rgba(93, 188, 252, 0.3);
+    border-radius: 10px;
+    background-color:linear-gradient(red,blue) !important;
+    /* box-shadow: -10 1px 1px rgba(0,0,0,0.2); */
+  }
+  .light .card{
+    border:none;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.2),1px 1px 1px rgba(0,0,0,0.15) ;
+  }
+  .light .card:hover{
+    border: none;
+  }
+  .card:hover{
+    border: 1px solid rgb(43, 43, 194);
+    rotate: 1deg;
+    background-color: rgba(215,215,220,0.3);
+    scale: 1.01;
+  }
+  .light .card:hover{
+    background-color:#575050;
+  }
+  .card img{
+    border-radius: 10px;
+  }
+  
+  .title{
+    color: var(--title);
+    font-size: 25px;
+    margin-left: 10px;
+    margin-left: 5px !important;
+    text-transform:capitalize ;
+  }
+  .subtitle{
+    color: var(--subtitle);
+    margin-left: 10px;
+  }
+
+  .icons{
+  justify-content: space-between;
+  margin:10px;
+
+}
+
+.icon-link:hover,.icon-github:hover{
+  font-size: 18px;
+  color: gray;
+}
+@media (max-width:600px) {
+  main.flex{  
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  .left-section{
+    margin-left: auto;
+    margin-right:auto ;
+  }
+
+ }
+
